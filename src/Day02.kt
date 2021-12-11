@@ -33,11 +33,11 @@ fun main() {
     return pos * depth
   }
 
-  val testInput = readInput("Day02_test")
+  val testInput = readInputLines("Day02_test")
   check(part1(testInput) == 150)
   check(part2(testInput) == 900)
 
-  val input = readInput("Day02")
+  val input = readInputLines("Day02")
   println(part1(input))
   println(part2(input))
 }
