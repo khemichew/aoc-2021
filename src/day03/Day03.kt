@@ -1,3 +1,9 @@
+package day03
+
+import flipBits
+import readInputLines
+import transpose
+
 fun main() {
   fun mostFreqBit(input: List<String>): String {
     val half = input.size / 2.toDouble()
@@ -39,11 +45,11 @@ fun main() {
   }
 
   // test if implementation meets criteria from the description, like:
-  val testInput = readInputLines("Day03_test")
+  val testInput = readInputLines("day03/Day03_test")
   check(part1(testInput) == 198)
   check(part2(testInput) == 230)
 
-  val input = readInputLines("Day03")
+  val input = readInputLines("day03/Day03")
   println(part1(input))
   println(part2(input))
 }

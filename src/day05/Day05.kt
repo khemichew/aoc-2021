@@ -1,8 +1,11 @@
+package day05
+
+import readInputLines
 import kotlin.math.sign
 
 class Line(val x1: Int, val y1: Int, val x2: Int, val y2: Int) {
   override fun toString(): String {
-    return "Line[($x1, $y1), ($x2, $y2)]"
+    return "day05.Line[($x1, $y1), ($x2, $y2)]"
   }
 }
 
@@ -43,12 +46,12 @@ fun main() {
     return countStraightLines(input)
   }
 
-  val testInput = readInputLines("Day05_test")
+  val testInput = readInputLines("day05/Day05_test")
   val testLines = testInput.map { s -> parseLine(s) }
   check(part1(testLines) == 5)
   check(part2(testLines) == 12)
 
-  val input = readInputLines("Day05")
+  val input = readInputLines("day05/Day05")
   val lines = input.map { s -> parseLine(s) }
   println(part1(lines))
   println(part2(lines))

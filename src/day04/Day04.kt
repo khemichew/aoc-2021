@@ -1,3 +1,8 @@
+package day04
+
+import readInputLines
+import readLinesAsIntMatrix
+
 class Bingo (private val numbers: List<List<Int>>) {
   private val isMarked: Array<Array<Boolean>> = Array(5) { Array(5) { false } }
 
@@ -104,11 +109,11 @@ fun main() {
     return 0 // NOT REACHED
   }
 
-  val testInput = readInputLines("Day04_test")
+  val testInput = readInputLines("day04/Day04_test")
   check(part1(testInput) == 4512)
   check(part2(testInput) == 1924)
 
-  val input = readInputLines("Day04")
+  val input = readInputLines("day04/Day04")
   println(part1(input))
   println(part2(input))
 }
