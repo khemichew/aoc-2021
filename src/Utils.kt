@@ -16,9 +16,11 @@ fun readInputLinesAsInts(name: String) = readInputLines(name).map(String::toInt)
 
 fun splitWhitespace(line: String) = line.split("\\s+".toRegex()).filterNot(String::isBlank)
 
-fun readLineAsInts(line: String) = splitWhitespace(line).map(String::toInt)
+fun parseLineWithCommaAsInts(line: String) = line.split(",".toRegex()).filterNot(String::isBlank).map(String::toInt)
 
-fun readLinesAsIntMatrix(lines: List<String>) = lines.map(::readLineAsInts)
+fun parseLineAsInts(line: String) = splitWhitespace(line).map(String::toInt)
+
+fun parseLinesAsIntMatrix(lines: List<String>) = lines.map(::parseLineAsInts)
 
 /**
  * Converts string to md5 hash.
