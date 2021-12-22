@@ -1,6 +1,7 @@
 package day06
 
 import readInputLine
+import parseLineWithCommaAsInts
 
 fun main() {
   fun lanternFish(input: List<Int>, iterations: Int): Long {
@@ -18,12 +19,12 @@ fun main() {
   fun part2(input: List<Int>): Long = lanternFish(input, 256)
 
   val testInput = readInputLine("day06/test_input")
-  val sanitiseTestInput = testInput.split(",".toRegex()).filterNot(String::isBlank).map(String::toInt)
+  val sanitiseTestInput = parseLineWithCommaAsInts(testInput)
   check(part1(sanitiseTestInput) == 5934L)
   check(part2(sanitiseTestInput) == 26984457539)
 
   val input = readInputLine("day06/input")
-  val sanitiseInput = input.split(",".toRegex()).filterNot(String::isBlank).map(String::toInt)
+  val sanitiseInput = parseLineWithCommaAsInts(input)
   println(part1(sanitiseInput))
   println(part2(sanitiseInput))
 }
